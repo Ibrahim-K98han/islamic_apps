@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:namaj_apps/pages/azan_page.dart';
+import 'package:namaj_apps/pages/romjan_calender_page.dart';
 
 import 'oju_page.dart';
 
@@ -66,6 +67,43 @@ class _HomePageState extends State<HomePage> {
         children: [
           Column(
             children: [
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RomjanCalender()),
+                  );
+                },
+                child: Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 60,
+                      width: double.infinity,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                              colors: [
+                                Color.fromARGB(255, 16, 150, 74),
+                                Color.fromARGB(255, 159, 197, 159),
+                              ],
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter),
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            'রমজানের ক্যালেন্ডার',
+                            style: TextStyle(
+                                color: Colors.white, fontSize: 18),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.only(top: 5),
                 child: Row(
