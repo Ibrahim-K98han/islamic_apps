@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:namaj_apps/pages/azan_page.dart';
+import 'package:namaj_apps/pages/masjid_page.dart';
 import 'package:namaj_apps/pages/romjan_calender_page.dart';
 
 import 'oju_page.dart';
@@ -95,8 +96,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           const Text(
                             'রমজানের ক্যালেন্ডার',
-                            style: TextStyle(
-                                color: Colors.white, fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                         ],
                       ),
@@ -194,7 +194,12 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MosjidPage()));
+                      },
                       child: Expanded(
                         child: Container(
                           height: (MediaQuery.of(context).size.height / 6.5),
