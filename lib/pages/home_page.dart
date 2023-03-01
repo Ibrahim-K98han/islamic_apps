@@ -27,12 +27,40 @@ class _HomePageState extends State<HomePage> {
     'images/praying.png',
     'images/praying.png',
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('মেইন পেজ'),
         backgroundColor: Colors.green,
+      ),
+      drawer: Drawer(
+        child: SafeArea(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              ListTile(
+                title: Text("আজান"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text("ওজু"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text("মসজিদ"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        ),
       ),
       body: Column(
         children: [
@@ -170,7 +198,6 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 15,
               ),
-             
             ],
           ),
         ],
