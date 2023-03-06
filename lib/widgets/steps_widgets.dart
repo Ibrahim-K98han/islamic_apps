@@ -2,32 +2,32 @@
 import 'package:flutter/material.dart';
 
 class Step {
-  Step(this.heading, this.subHeading,this.subHeading1,this.subHeading2,this.subHeading3,
+  Step(this.heading, this.subHeading,
       [this.isExpanded = false]);
   String heading;
   String subHeading;
-  String subHeading1;
-  String subHeading2;
-  String subHeading3;
+  // String subHeading1;
+  // String subHeading2;
+  // String subHeading3;
   bool isExpanded;
 }
 
 List<Step> getSteps() {
   return [
-    Step('ইকামাত', 'Purchase List','Order List','VAT List','Product Unit'),
-    Step('তাকবিরে তাহরিমা', 'Purchase List','Order List','VAT List','Product Unit'),
-    Step('সানা', 'Purchase List','Order List','VAT List','Product Unit'),
-    Step('আউজুবিল্লাহ ', 'Purchase List','Order List','VAT List','Product Unit'),
-    Step('বিসমিল্লাহ ', 'Purchase List','Order List','VAT List','Product Unit'),
-    Step('রুকুর দোয়া ', 'Purchase List','Order List','VAT List','Product Unit'),
-    Step('সিজদার দোয়া ', 'Purchase List','Order List','VAT List','Product Unit'),
-    Step('২ সিজদার মধ্যবর্তী দোয়া ', 'Purchase List','Order List','VAT List','Product Unit'),
-    Step('তাশাহুদ', 'Purchase List','Order List','VAT List','Product Unit'),
-    Step('দরুদ', 'Purchase List','Order List','VAT List','Product Unit'),
-    //Step('দু’আই মাসুরাহ', 'Purchase List','Order List','VAT List','Product Unit'),
-   // Step('সালাম', 'Purchase List','Order List','VAT List','Product Unit'),
-   // Step('দু’আই কুনুত', 'Purchase List','Order List','VAT List','Product Unit'),
-    //Step('সালাত শেষে দোয়া', 'Purchase List','Order List','VAT List','Product Unit'),
+    Step('ইকামাত', 'Purchase List'),
+    Step('তাকবিরে তাহরিমা', 'Purchase List'),
+    Step('সানা', 'Purchase List'),
+    Step('আউজুবিল্লাহ ', 'Purchase List'),
+    Step('বিসমিল্লাহ ', 'Purchase List'),
+    Step('রুকুর দোয়া ', 'Purchase List'),
+    Step('সিজদার দোয়া ', 'Purchase List'),
+    Step('২ সিজদার মধ্যবর্তী দোয়া ', 'Purchase List'),
+    Step('তাশাহুদ', 'Purchase List'),
+    Step('দরুদ', 'Purchase List'),
+    Step('দু’আই মাসুরাহ', 'Purchase List'),
+    Step('সালাম', 'Purchase List'),
+    Step('দু’আই কুনুত', 'Purchase List'),
+    Step('সালাত শেষে দোয়া', 'Purchase List'),
   ];
 }
 
@@ -56,8 +56,9 @@ class _StepsState extends State<Steps> {
 
   Widget _renderSteps() {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: ExpansionPanelList(
+        elevation: 0,
         expansionCallback: (int index, bool isExpanded) {
           setState(() {
             _steps[index].isExpanded = !isExpanded;
@@ -75,34 +76,11 @@ class _StepsState extends State<Steps> {
               );
             },
             body: Padding(
-              padding: EdgeInsets.only(bottom: 10),
+
+              padding: EdgeInsets.only(bottom: 10,),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    '${step.subHeading}',
-                    style: TextStyle(
-                      fontSize: 15,
-                    ),
-                  ),
-                  Text(
-                    '${step.subHeading1}',
-                    style: TextStyle(
-                      fontSize: 15,
-                    ),
-                  ),
-                  Text(
-                    '${step.subHeading2}',
-                    style: TextStyle(
-                      fontSize: 15,
-                    ),
-                  ),
-                  Text(
-                    '${step.subHeading3}',
-                    style: TextStyle(
-                      fontSize: 15,
-                    ),
-                  ),
                   Text(
                     '${step.subHeading}',
                     style: TextStyle(

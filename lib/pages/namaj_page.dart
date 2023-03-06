@@ -18,7 +18,7 @@ class _NamajPageState extends State<NamajPage> {
         title: Text('নামাজ'),),
       body: Column(
         children: [
-          Steps(),
+          Expanded(child: Steps()),
         ],
       ),
     );
