@@ -14,7 +14,23 @@ class Step {
 
 List<Step> getSteps() {
   return [
-    Step('ইকামাত', 'Purchase List'),
+    Step('ইকামাত', '''ইকামত’ (الإقامة) অর্থ দাঁড় করানো। উপস্থিত মুছল্লীদেরকে ছালাতে দাঁড়িয়ে যাওয়ার হুঁশিয়ারী শুনানোর জন্য ‘এক্বামত’ দিতে হয়। জামা‘আতে হউক বা একাকী হউক সকল অবস্থায় ফরয ছালাতে আযান ও এক্বামত দেওয়া সুন্নাত।
+    
+    ১.	আল্লাহু আকবার   (৪ বার)
+
+    ২.	আশহাদু-আল লা- ইলাহা ইল্লাল্লাহ্   (২ বার)
+
+    ৩.	আশহাদু-আন্না মুহাম্মাদুর রাসূলুল্লাহ্   (২ বার)
+
+    ৪.	হাইয়া আলাছ ছালাহ্    (২ বার)
+
+    ৫.	হাইয়া আলাল ফালাহ্   (২ বার)
+
+    ৬.	ক্বদ ক্বামাতিস্‌ সালাহ  (২ বার)
+
+    ৭.	আল্লাহু আকবার  (২ বার)
+
+    ৮.	লা ইলাহা ইল্লাল্লাহ্   (১ বার)'''),
     Step('তাকবিরে তাহরিমা', 'Purchase List'),
     Step('সানা', 'Purchase List'),
     Step('আউজুবিল্লাহ ', 'Purchase List'),
@@ -76,15 +92,18 @@ class _StepsState extends State<Steps> {
               );
             },
             body: Padding(
-
               padding: EdgeInsets.only(bottom: 10,),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    '${step.subHeading}',
-                    style: TextStyle(
-                      fontSize: 15,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      textAlign: TextAlign.justify,
+                      '${step.subHeading}',
+                      style: TextStyle(
+                        fontSize: 15,
+                      ),
                     ),
                   ),
                 ],
