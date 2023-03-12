@@ -15,9 +15,9 @@ class _NamajPageState extends State<NamajPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text('নামাজ'),),
+        title: const Text('নামাজ'),),
       body: Column(
-        children: [
+        children: const [
           Expanded(child: Steps()),
         ],
       ),
