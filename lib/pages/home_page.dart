@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => AzanPage()),
+                      MaterialPageRoute(builder: (context) => const AzanPage()),
                     );
                   },
                   child: Expanded(
@@ -154,7 +154,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => OjuPage()),
+                      MaterialPageRoute(builder: (context) => const OjuPage()),
                     );
                   },
                   child: Expanded(
@@ -197,7 +197,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => MosjidPage()));
+                            builder: (context) => const MosjidPage()));
                   },
                   child: Expanded(
                     child: Container(
@@ -249,7 +249,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => NamajPage()),
+                      MaterialPageRoute(builder: (context) => const NamajPage()),
                     );
                   },
                   child: Expanded(
