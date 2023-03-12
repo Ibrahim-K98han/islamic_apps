@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:namaj_apps/pages/azan_page.dart';
+import 'package:namaj_apps/pages/gosole_page.dart';
 import 'package:namaj_apps/pages/masjid_page.dart';
 import 'package:namaj_apps/pages/namaj_page.dart';
 import 'package:namaj_apps/pages/romjan_calender_page.dart';
@@ -332,10 +333,10 @@ class _HomePageState extends State<HomePage> {
                 ),
                 InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => MosjidPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const GosolePage()));
                   },
                   child: Expanded(
                     child: Container(

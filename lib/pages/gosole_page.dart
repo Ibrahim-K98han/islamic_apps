@@ -16,7 +16,7 @@ class _GosolePageState extends State<GosolePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('মসজিদ'),
+        title: const Text('গোসল'),
         backgroundColor: Colors.green,
       ),
       body: Padding(
@@ -30,13 +30,13 @@ class _GosolePageState extends State<GosolePage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text('''মসজিদে প্রবেশের দোয়া''',
+                    Text('''ফরজ গোসলের দোয়া, নিয়ত ও নিয়ম''',
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.grey)),
                     SizedBox(height: 10,),
-                    Text('''اللَّهمَّ افتَحْ لِيْ أبوابَ رَحْمَتِك'''),
+                    Text('''প্রয়োজন অপ্রয়োজনে আমরা প্রতিদিন গোসল করি। তবে পবিত্রতা অর্জনের উদ্দেশ্যে গোসলের ক্ষেত্রে কিছু নিয়ম মানতে হয়। তা না হলে পবিত্রতা হওয়া যায় না।চলুন তাহলে গোসলের নিয়ম সম্পর্কে বিস্তারিত জেনে নেই –'''),
                     Text('''আল্লাহুম্মাফ তাহলি আবওয়াবা রহমাতিক'''),
                     Text('''হে আল্লাহ! আমার জন্য আপনার রহমতের দরজাগুলো খুলে দিন'''),
                   ],
