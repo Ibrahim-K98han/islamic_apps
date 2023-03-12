@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => RomjanCalender()),
+                MaterialPageRoute(builder: (context) => const RomjanCalender()),
               );
             },
             child: Expanded(
@@ -92,8 +92,8 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(15)),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text(
+                    children: const [
+                      Text(
                         'রমজানের ক্যালেন্ডার',
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
