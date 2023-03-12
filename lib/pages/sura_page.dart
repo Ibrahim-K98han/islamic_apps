@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/steps_widgets.dart';
+import '../widgets/sura_steps_widgets.dart';
 
 class SuraPage extends StatefulWidget {
   const SuraPage({Key? key}) : super(key: key);
@@ -15,10 +16,10 @@ class _SuraPageState extends State<SuraPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text('নামাজ'),),
+        title: Text('সূরা'),),
       body: Column(
-        children: [
-          Expanded(child: Steps()),
+        children: const [
+          Expanded(child: SuraSteps()),
         ],
       ),
     );

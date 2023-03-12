@@ -3,6 +3,7 @@ import 'package:namaj_apps/pages/azan_page.dart';
 import 'package:namaj_apps/pages/masjid_page.dart';
 import 'package:namaj_apps/pages/namaj_page.dart';
 import 'package:namaj_apps/pages/romjan_calender_page.dart';
+import 'package:namaj_apps/pages/sura_page.dart';
 
 import 'oju_page.dart';
 
@@ -289,10 +290,10 @@ class _HomePageState extends State<HomePage> {
                 ),
                 InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => OjuPage()),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const SuraPage()),
+                    );
                   },
                   child: Expanded(
                     child: Container(
