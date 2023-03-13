@@ -56,129 +56,157 @@ class _HomePageState extends State<HomePage> {
         ),
         child: SafeArea(
           child: ListView(
-           padding: const EdgeInsets.all(0),
+            padding: const EdgeInsets.all(0),
             children: [
               Container(
                 color: Colors.green,
                 child: DrawerHeader(
-                  child: Column(
-                    children: const[
-                    Text('Welcome to Namaj App',style: TextStyle(color: Colors.white,fontSize: 20),)
-                    ],
-                  )
-                  ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const [
+                    Text(
+                      'Welcome to Namaj App',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ],
+                )),
               ),
-              Padding(
-                padding: const EdgeInsets.all(5),
-                child: ListTile(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  tileColor: Colors.white54,
-                  trailing: const Icon(Icons.arrow_right),
-                  title: const Text(
-                    "আজান",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const AzanPage()));
-                  },
+              ListTile(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                //tileColor: Colors.white54,
+                trailing: const Icon(Icons.arrow_right,color: Colors.white),
+                title: const Text(
+                  "আজান",
+                  style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AzanPage()));
+                },
               ),
-              Padding(
-                padding: const EdgeInsets.all(5),
-                child: ListTile(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  tileColor: Colors.white54,
-                  trailing: const Icon(Icons.arrow_right),
-                  title: const Text(
-                    "ওজু",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const OjuPage()));
-                  },
-                ),
+              const Divider(
+                color: Colors.white,
+                thickness: 1,
               ),
-              Padding(
-                padding: const EdgeInsets.all(5),
-                child: ListTile(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  tileColor: Colors.white54,
-                  trailing: const Icon(Icons.arrow_right),
-                  title: const Text(
-                    "মসজিদ",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const MosjidPage()));
-                  },
+              ListTile(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                // tileColor: Colors.white54,
+                trailing: const Icon(Icons.arrow_right,color: Colors.white),
+                title: const Text(
+                  "ওজু",
+                  style: TextStyle(fontSize: 18,color: Colors.white),
                 ),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const OjuPage()));
+                },
               ),
-              Padding(
-                padding: const EdgeInsets.all(5),
-                child: ListTile(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  tileColor: Colors.white54,
-                  trailing: const Icon(Icons.arrow_right),
-                  title: const Text(
-                    "নামাজ",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const NamajPage()));
-                  },
-                ),
+               const Divider(
+                color: Colors.white,
+                thickness: 1,
               ),
-              Padding(
-                padding: const EdgeInsets.all(5),
-                child: ListTile(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  tileColor: Colors.white54,
-                  trailing: const Icon(Icons.arrow_right),
-                  title: const Text(
-                    "সূরা",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SuraPage()));
-                  },
+              ListTile(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                //tileColor: Colors.white54,
+                trailing: const Icon(Icons.arrow_right,color: Colors.white),
+                title: const Text(
+                  "মসজিদ",
+                  style: TextStyle(fontSize: 18,color: Colors.white),
                 ),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MosjidPage()));
+                },
               ),
-              Padding(
-               padding: const EdgeInsets.all(5),
-                child: ListTile(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  tileColor: Colors.white54,
-                  trailing: const Icon(Icons.arrow_right),
-                  title: const Text(
-                    "গোসল",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const GosolePage()));
-                  },
-                ),
+               const Divider(
+                color: Colors.white,
+                thickness: 1,
               ),
-              Padding(
-               padding: const EdgeInsets.all(5),
-                child: ListTile(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  tileColor: Colors.white54,
-                  trailing: const Icon(Icons.arrow_right),
-                  title: const Text(
-                    "তায়াম্মুম",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const TayamumPage()));
-                  },
+              ListTile(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                //tileColor: Colors.white54,
+                trailing: const Icon(Icons.arrow_right,color: Colors.white),
+                title: const Text(
+                  "নামাজ",
+                  style: TextStyle(fontSize: 18,color: Colors.white),
                 ),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const NamajPage()));
+                },
+              ),
+               const Divider(
+                color: Colors.white,
+                thickness: 1,
+              ),
+              ListTile(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                //tileColor: Colors.white54,
+                trailing: const Icon(Icons.arrow_right,color: Colors.white),
+                title: const Text(
+                  "সূরা",
+                  style: TextStyle(fontSize: 18,color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SuraPage()));
+                },
+              ),
+               const Divider(
+                color: Colors.white,
+                thickness: 1,
+              ),
+              ListTile(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                //tileColor: Colors.white54,
+                trailing: const Icon(Icons.arrow_right,color: Colors.white),
+                title: const Text(
+                  "গোসল",
+                  style: TextStyle(fontSize: 18,color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const GosolePage()));
+                },
+              ),
+               const Divider(
+                color: Colors.white,
+                thickness: 1,
+              ),
+              ListTile(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                //tileColor: Colors.white54,
+                trailing: const Icon(Icons.arrow_right,color: Colors.white),
+                title: const Text(
+                  "তায়াম্মুম",
+                  style: TextStyle(fontSize: 18,color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TayamumPage()));
+                },
               ),
             ],
           ),
@@ -194,7 +222,8 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const RomjanCalender()),
+                  MaterialPageRoute(
+                      builder: (context) => const RomjanCalender()),
                 );
               },
               child: Padding(
@@ -204,20 +233,21 @@ class _HomePageState extends State<HomePage> {
                   width: double.infinity,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 16, 150, 74),
-                            Color.fromARGB(255, 159, 197, 159),
-                          ],
-                          begin: Alignment.bottomCenter,
-                          end: Alignment.topCenter),
+                      // gradient: const LinearGradient(
+                      //     colors: [
+                      //       Color.fromARGB(255, 16, 150, 74),
+                      //       Color.fromARGB(255, 159, 197, 159),
+                      //     ],
+                      //     begin: Alignment.bottomCenter,
+                      //     end: Alignment.topCenter),
+                      border: Border.all(width: 1, color: Colors.green),
                       borderRadius: BorderRadius.circular(15)),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
                       Text(
                         'রমজানের ক্যালেন্ডার',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        style: TextStyle(color: Colors.green, fontSize: 18),
                       ),
                     ],
                   ),
@@ -235,7 +265,8 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const AzanPage()),
+                          MaterialPageRoute(
+                              builder: (context) => const AzanPage()),
                         );
                       },
                       child: Padding(
@@ -245,20 +276,22 @@ class _HomePageState extends State<HomePage> {
                           width: (MediaQuery.of(context).size.width / 3.5),
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                  colors: [
-                                    Color.fromARGB(255, 16, 150, 74),
-                                    Color.fromARGB(255, 159, 197, 159),
-                                  ],
-                                  begin: Alignment.bottomCenter,
-                                  end: Alignment.topCenter),
+                              // gradient: const LinearGradient(
+                              //     colors: [
+                              //       Color.fromARGB(255, 16, 150, 74),
+                              //       Color.fromARGB(255, 159, 197, 159),
+                              //     ],
+                              //     begin: Alignment.bottomCenter,
+                              //     end: Alignment.topCenter),
+                              border: Border.all(width: 1, color: Colors.green),
                               borderRadius: BorderRadius.circular(15)),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Text(
                                 'আজান',
-                                style: TextStyle(color: Colors.white, fontSize: 18),
+                                style: TextStyle(
+                                    color: Colors.green, fontSize: 18),
                               ),
                               const SizedBox(
                                 height: 20,
@@ -280,7 +313,8 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const OjuPage()),
+                          MaterialPageRoute(
+                              builder: (context) => const OjuPage()),
                         );
                       },
                       child: Padding(
@@ -290,20 +324,22 @@ class _HomePageState extends State<HomePage> {
                           width: (MediaQuery.of(context).size.width / 3.5),
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                  colors: [
-                                    Color.fromARGB(255, 16, 150, 74),
-                                    Color.fromARGB(255, 159, 197, 159),
-                                  ],
-                                  begin: Alignment.bottomCenter,
-                                  end: Alignment.topCenter),
+                              // gradient: const LinearGradient(
+                              //     colors: [
+                              //       Color.fromARGB(255, 16, 150, 74),
+                              //       Color.fromARGB(255, 159, 197, 159),
+                              //     ],
+                              //     begin: Alignment.bottomCenter,
+                              //     end: Alignment.topCenter),
+                              border: Border.all(width: 1, color: Colors.green),
                               borderRadius: BorderRadius.circular(15)),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Text(
                                 'ওজু',
-                                style: TextStyle(color: Colors.white, fontSize: 18),
+                                style: TextStyle(
+                                    color: Colors.green, fontSize: 18),
                               ),
                               const SizedBox(
                                 height: 20,
@@ -335,20 +371,22 @@ class _HomePageState extends State<HomePage> {
                           width: (MediaQuery.of(context).size.width / 3.5),
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                  colors: [
-                                    Color.fromARGB(255, 16, 150, 74),
-                                    Color.fromARGB(255, 159, 197, 159),
-                                  ],
-                                  begin: Alignment.bottomCenter,
-                                  end: Alignment.topCenter),
+                              // gradient: const LinearGradient(
+                              //     colors: [
+                              //       Color.fromARGB(255, 16, 150, 74),
+                              //       Color.fromARGB(255, 159, 197, 159),
+                              //     ],
+                              //     begin: Alignment.bottomCenter,
+                              //     end: Alignment.topCenter),
+                              border: Border.all(width: 1, color: Colors.green),
                               borderRadius: BorderRadius.circular(15)),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Text(
                                 'মসজিদ',
-                                style: TextStyle(color: Colors.white, fontSize: 18),
+                                style: TextStyle(
+                                    color: Colors.green, fontSize: 18),
                               ),
                               const SizedBox(
                                 height: 20,
@@ -392,20 +430,22 @@ class _HomePageState extends State<HomePage> {
                           width: (MediaQuery.of(context).size.width / 3.5),
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                  colors: [
-                                    Color.fromARGB(255, 16, 150, 74),
-                                    Color.fromARGB(255, 159, 197, 159),
-                                  ],
-                                  begin: Alignment.bottomCenter,
-                                  end: Alignment.topCenter),
+                              // gradient: const LinearGradient(
+                              //     colors: [
+                              //       Color.fromARGB(255, 16, 150, 74),
+                              //       Color.fromARGB(255, 159, 197, 159),
+                              //     ],
+                              //     begin: Alignment.bottomCenter,
+                              //     end: Alignment.topCenter),
+                              border: Border.all(width: 1, color: Colors.green),
                               borderRadius: BorderRadius.circular(15)),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Text(
                                 'নামাজ',
-                                style: TextStyle(color: Colors.white, fontSize: 18),
+                                style: TextStyle(
+                                    color: Colors.green, fontSize: 18),
                               ),
                               const SizedBox(
                                 height: 20,
@@ -427,7 +467,8 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const SuraPage()),
+                          MaterialPageRoute(
+                              builder: (context) => const SuraPage()),
                         );
                       },
                       child: Padding(
@@ -437,20 +478,22 @@ class _HomePageState extends State<HomePage> {
                           width: (MediaQuery.of(context).size.width / 3.5),
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                  colors: [
-                                    Color.fromARGB(255, 16, 150, 74),
-                                    Color.fromARGB(255, 159, 197, 159),
-                                  ],
-                                  begin: Alignment.bottomCenter,
-                                  end: Alignment.topCenter),
+                              // gradient: const LinearGradient(
+                              //     colors: [
+                              //       Color.fromARGB(255, 16, 150, 74),
+                              //       Color.fromARGB(255, 159, 197, 159),
+                              //     ],
+                              //     begin: Alignment.bottomCenter,
+                              //     end: Alignment.topCenter),
+                              border: Border.all(width: 1, color: Colors.green),
                               borderRadius: BorderRadius.circular(15)),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Text(
                                 'সূরা',
-                                style: TextStyle(color: Colors.white, fontSize: 18),
+                                style: TextStyle(
+                                    color: Colors.green, fontSize: 18),
                               ),
                               const SizedBox(
                                 height: 20,
@@ -482,20 +525,22 @@ class _HomePageState extends State<HomePage> {
                           width: (MediaQuery.of(context).size.width / 3.5),
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                  colors: [
-                                    Color.fromARGB(255, 16, 150, 74),
-                                    Color.fromARGB(255, 159, 197, 159),
-                                  ],
-                                  begin: Alignment.bottomCenter,
-                                  end: Alignment.topCenter),
+                              // gradient: const LinearGradient(
+                              //     colors: [
+                              //       Color.fromARGB(255, 16, 150, 74),
+                              //       Color.fromARGB(255, 159, 197, 159),
+                              //     ],
+                              //     begin: Alignment.bottomCenter,
+                              //     end: Alignment.topCenter),
+                              border: Border.all(width: 1, color: Colors.green),
                               borderRadius: BorderRadius.circular(15)),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Text(
                                 'গোসল',
-                                style: TextStyle(color: Colors.white, fontSize: 18),
+                                style: TextStyle(
+                                    color: Colors.green, fontSize: 18),
                               ),
                               const SizedBox(
                                 height: 20,
@@ -532,16 +577,18 @@ class _HomePageState extends State<HomePage> {
                     },
                     child: Container(
                       height: (MediaQuery.of(context).size.height / 7),
-                      width:(MediaQuery.of(context).size.height / 7),
+                      width: (MediaQuery.of(context).size.height / 7),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                              colors: [
-                                Color.fromARGB(255, 16, 150, 74),
-                                Color.fromARGB(255, 159, 197, 159),
-                              ],
-                              begin: Alignment.bottomCenter,
-                              end: Alignment.topCenter),
+                          // gradient: const LinearGradient(
+                          //     colors: [
+                          //       Color.fromARGB(255, 16, 150, 74),
+                          //       Color.fromARGB(255, 159, 197, 159),
+                          //     ],
+                          //     begin: Alignment.bottomCenter,
+                          //     end: Alignment.topCenter),
+                          //color: Colors.green,
+                          border: Border.all(width: 1, color: Colors.green),
                           borderRadius: BorderRadius.circular(15)),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -549,8 +596,10 @@ class _HomePageState extends State<HomePage> {
                           const FittedBox(
                             child: Text(
                               'তায়াম্মুম',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 18),
+                              style: TextStyle(
+                                color: Colors.green,
+                                fontSize: 18,
+                              ),
                             ),
                           ),
                           const SizedBox(
