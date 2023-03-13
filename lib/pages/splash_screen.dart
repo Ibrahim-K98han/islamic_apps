@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   _route() {
     Timer(
-      Duration(seconds: 3),
+      const Duration(seconds: 3),
           () {
         Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => HomePage()));
       },
@@ -49,10 +49,9 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-
-              Padding(
-                padding: const EdgeInsets.only(top: 30.0),
+            children: const [
+               Padding(
+                padding: EdgeInsets.only(top: 30.0),
                 child: Text(
                   'ইসলাম',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,),
                 ),

@@ -17,8 +17,18 @@ class _OjuPageState extends State<OjuPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ওজু'),
-        backgroundColor: Colors.green,
+        title: const Text('ওজু'),
+         flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: [
+                  Color.fromARGB(255, 16, 150, 74),
+                  Color.fromARGB(255, 159, 197, 159),
+                ]),
+          ),
+        ),
       ),
        body: Column(
         children:  const [

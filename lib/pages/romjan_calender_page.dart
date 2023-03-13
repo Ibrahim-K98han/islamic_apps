@@ -12,7 +12,7 @@ class _RomjanCalenderState extends State<RomjanCalender> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('রমজানের ক্যালেন্ডার'),
+        title: const Text('রমজানের ক্যালেন্ডার'),
         backgroundColor: Colors.green,
       ),
       body: SafeArea(
