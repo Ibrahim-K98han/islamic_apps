@@ -16,7 +16,7 @@ class _SuraPageState extends State<SuraPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text('সূরা'),),
+        title: const Text('সূরা'),),
       body: Column(
         children: const [
           Expanded(child: SuraSteps()),
