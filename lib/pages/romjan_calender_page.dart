@@ -13,7 +13,17 @@ class _RomjanCalenderState extends State<RomjanCalender> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('রমজানের ক্যালেন্ডার'),
-        backgroundColor: Colors.green,
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: [
+                  Color.fromARGB(255, 16, 150, 74),
+                  Color.fromARGB(255, 159, 197, 159),
+                ]),
+          ),
+        ),
       ),
       body: SafeArea(
         child: Column(

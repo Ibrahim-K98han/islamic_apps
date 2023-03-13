@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.namaj_apps">
    <application
-        android:label="namaj_apps"
+        android:label="Muslim Mindfulness"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
