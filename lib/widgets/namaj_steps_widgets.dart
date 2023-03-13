@@ -102,19 +102,20 @@ List<Step> getSteps() {
   ];
 }
 
-class Steps extends StatefulWidget {
-  const Steps({Key? key}) : super(key: key);
+class NamajSteps extends StatefulWidget {
+  const NamajSteps({Key? key}) : super(key: key);
 
   @override
-  State<Steps> createState() => _StepsState();
+  State<NamajSteps> createState() => _StepsState();
 }
 
-class _StepsState extends State<Steps> {
+class _StepsState extends State<NamajSteps> {
   final List<Step> _steps = getSteps();
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      physics: BouncingScrollPhysics(),
       scrollDirection: Axis.vertical,
       child: Column(
         children: [

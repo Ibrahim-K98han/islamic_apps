@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/steps_widgets.dart';
 import '../widgets/sura_steps_widgets.dart';
 
 class SuraPage extends StatefulWidget {

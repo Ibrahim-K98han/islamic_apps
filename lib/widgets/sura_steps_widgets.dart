@@ -147,6 +147,7 @@ class _SuraStepsState extends State<SuraSteps> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
       scrollDirection: Axis.vertical,
       child: Column(
         children: [

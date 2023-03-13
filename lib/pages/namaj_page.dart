@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/steps_widgets.dart';
+import '../widgets/namaj_steps_widgets.dart';
 
 class NamajPage extends StatefulWidget {
   const NamajPage({Key? key}) : super(key: key);
@@ -17,8 +17,8 @@ class _NamajPageState extends State<NamajPage> {
         backgroundColor: Colors.green,
         title: const Text('নামাজ'),),
       body: Column(
-        children: const [
-          Expanded(child: Steps()),
+        children:  const[
+          Expanded(child: NamajSteps()),
         ],
       ),
     );
