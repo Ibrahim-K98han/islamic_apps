@@ -27,11 +27,6 @@ class _HomePageState extends State<HomePage> {
   ];
   final List<String> list = [
     'images/praying.png',
-    'images/praying.png',
-    'images/praying.png',
-    'images/praying.png',
-    'images/praying.png',
-    'images/praying.png',
   ];
 
   @override
@@ -42,6 +37,13 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.green,
       ),
       drawer: Drawer(
+        backgroundColor: Colors.green,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topRight: Radius.circular(20),
+              bottomRight: Radius.circular(20),
+          ),
+        ),
         child: SafeArea(
           child: ListView(
             padding: EdgeInsets.zero,
@@ -60,6 +62,30 @@ class _HomePageState extends State<HomePage> {
               ),
               ListTile(
                 title: Text("মসজিদ"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text("নামাজ"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text("সূরা"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text("গোসল"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text("তায়াম্মুম"),
                 onTap: () {
                   Navigator.pop(context);
                 },
@@ -137,8 +163,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           const Text(
                             'আজান',
-                            style: TextStyle(
-                                color: Colors.white, fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                           const SizedBox(
                             height: 20,
@@ -179,8 +204,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           const Text(
                             'ওজু',
-                            style: TextStyle(
-                                color: Colors.white, fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                           const SizedBox(
                             height: 20,
@@ -221,8 +245,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           const Text(
                             'মসজিদ',
-                            style: TextStyle(
-                                color: Colors.white, fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                           const SizedBox(
                             height: 20,
@@ -240,7 +263,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-         const SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(
@@ -252,7 +275,8 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const NamajPage()),
+                      MaterialPageRoute(
+                          builder: (context) => const NamajPage()),
                     );
                   },
                   child: Expanded(
@@ -274,8 +298,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           const Text(
                             'নামাজ',
-                            style: TextStyle(
-                                color: Colors.white, fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                           const SizedBox(
                             height: 20,
@@ -316,8 +339,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           const Text(
                             'সূরা',
-                            style: TextStyle(
-                                color: Colors.white, fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                           const SizedBox(
                             height: 20,
@@ -358,8 +380,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           const Text(
                             'গোসল',
-                            style: TextStyle(
-                                color: Colors.white, fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                           const SizedBox(
                             height: 20,
@@ -389,7 +410,8 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const TayamumPage()),
+                      MaterialPageRoute(
+                          builder: (context) => const TayamumPage()),
                     );
                   },
                   child: Expanded(
@@ -412,8 +434,8 @@ class _HomePageState extends State<HomePage> {
                           FittedBox(
                             child: const Text(
                               'তায়াম্মুম',
-                              style: TextStyle(
-                                  color: Colors.white, fontSize: 18),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
                             ),
                           ),
                           const SizedBox(
@@ -429,100 +451,100 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                InkWell(
-                  onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => OjuPage()),
-                    // );
-                  },
-                  child: Expanded(
-                    child: Container(
-                      height: (MediaQuery.of(context).size.height / 6.5),
-                      width: (MediaQuery.of(context).size.width / 3.5),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                              colors: [
-                                Color.fromARGB(255, 16, 150, 74),
-                                Color.fromARGB(255, 159, 197, 159),
-                              ],
-                              begin: Alignment.bottomCenter,
-                              end: Alignment.topCenter),
-                          borderRadius: BorderRadius.circular(15)),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const FittedBox(
-                            child:  Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                'পুরুষের নামাজ',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 18),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Image.asset(
-                            'images/praying.png',
-                            width: 40,
-                            height: 40,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => MosjidPage()));
-                  },
-                  child: Expanded(
-                    child: Container(
-                      height: (MediaQuery.of(context).size.height / 6.5),
-                      width: (MediaQuery.of(context).size.width / 3.5),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                              colors: [
-                                Color.fromARGB(255, 16, 150, 74),
-                                Color.fromARGB(255, 159, 197, 159),
-                              ],
-                              begin: Alignment.bottomCenter,
-                              end: Alignment.topCenter),
-                          borderRadius: BorderRadius.circular(15)),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const FittedBox(
-                            child:  Padding(
-                              padding:  EdgeInsets.all(8.0),
-                              child: Text(
-                                'মহিলাদের নামাজ',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 18),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Image.asset(
-                            'images/praying.png',
-                            width: 40,
-                            height: 40,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+                // InkWell(
+                //   onTap: () {
+                //     // Navigator.push(
+                //     //   context,
+                //     //   MaterialPageRoute(builder: (context) => OjuPage()),
+                //     // );
+                //   },
+                //   child: Expanded(
+                //     child: Container(
+                //       height: (MediaQuery.of(context).size.height / 6.5),
+                //       width: (MediaQuery.of(context).size.width / 3.5),
+                //       alignment: Alignment.center,
+                //       decoration: BoxDecoration(
+                //           gradient: const LinearGradient(
+                //               colors: [
+                //                 Color.fromARGB(255, 16, 150, 74),
+                //                 Color.fromARGB(255, 159, 197, 159),
+                //               ],
+                //               begin: Alignment.bottomCenter,
+                //               end: Alignment.topCenter),
+                //           borderRadius: BorderRadius.circular(15)),
+                //       child: Column(
+                //         mainAxisAlignment: MainAxisAlignment.center,
+                //         children: [
+                //           const FittedBox(
+                //             child:  Padding(
+                //               padding: const EdgeInsets.all(8.0),
+                //               child: Text(
+                //                 'পুরুষের নামাজ',
+                //                 style: TextStyle(
+                //                     color: Colors.white, fontSize: 18),
+                //               ),
+                //             ),
+                //           ),
+                //           const SizedBox(
+                //             height: 20,
+                //           ),
+                //           Image.asset(
+                //             'images/praying.png',
+                //             width: 40,
+                //             height: 40,
+                //           ),
+                //         ],
+                //       ),
+                //     ),
+                //   ),
+                // ),
+                // InkWell(
+                //   onTap: () {
+                //     // Navigator.push(
+                //     //     context,
+                //     //     MaterialPageRoute(
+                //     //         builder: (context) => MosjidPage()));
+                //   },
+                //   child: Expanded(
+                //     child: Container(
+                //       height: (MediaQuery.of(context).size.height / 6.5),
+                //       width: (MediaQuery.of(context).size.width / 3.5),
+                //       alignment: Alignment.center,
+                //       decoration: BoxDecoration(
+                //           gradient: const LinearGradient(
+                //               colors: [
+                //                 Color.fromARGB(255, 16, 150, 74),
+                //                 Color.fromARGB(255, 159, 197, 159),
+                //               ],
+                //               begin: Alignment.bottomCenter,
+                //               end: Alignment.topCenter),
+                //           borderRadius: BorderRadius.circular(15)),
+                //       child: Column(
+                //         mainAxisAlignment: MainAxisAlignment.center,
+                //         children: [
+                //           const FittedBox(
+                //             child:  Padding(
+                //               padding:  EdgeInsets.all(8.0),
+                //               child: Text(
+                //                 'মহিলাদের নামাজ',
+                //                 style: TextStyle(
+                //                     color: Colors.white, fontSize: 18),
+                //               ),
+                //             ),
+                //           ),
+                //           const SizedBox(
+                //             height: 20,
+                //           ),
+                //           Image.asset(
+                //             'images/praying.png',
+                //             width: 40,
+                //             height: 40,
+                //           ),
+                //         ],
+                //       ),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),
