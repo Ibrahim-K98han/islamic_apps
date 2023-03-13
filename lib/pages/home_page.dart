@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontSize: 18),
                   ),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const AzanPage()));
                   },
                 ),
               ),
@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontSize: 18),
                   ),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const OjuPage()));
                   },
                 ),
               ),
@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontSize: 18),
                   ),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const MosjidPage()));
                   },
                 ),
               ),
@@ -128,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontSize: 18),
                   ),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const NamajPage()));
                   },
                 ),
               ),
@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontSize: 18),
                   ),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SuraPage()));
                   },
                 ),
               ),
@@ -160,7 +160,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontSize: 18),
                   ),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const GosolePage()));
                   },
                 ),
               ),
@@ -176,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontSize: 18),
                   ),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const TayamumPage()));
                   },
                 ),
               ),
@@ -238,35 +238,38 @@ class _HomePageState extends State<HomePage> {
                           MaterialPageRoute(builder: (context) => const AzanPage()),
                         );
                       },
-                      child: Container(
-                        height: (MediaQuery.of(context).size.height / 6.5),
-                        width: (MediaQuery.of(context).size.width / 3.5),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            gradient: const LinearGradient(
-                                colors: [
-                                  Color.fromARGB(255, 16, 150, 74),
-                                  Color.fromARGB(255, 159, 197, 159),
-                                ],
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter),
-                            borderRadius: BorderRadius.circular(15)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'আজান',
-                              style: TextStyle(color: Colors.white, fontSize: 18),
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Image.asset(
-                              'images/praying.png',
-                              width: 40,
-                              height: 40,
-                            ),
-                          ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: (MediaQuery.of(context).size.height / 6.5),
+                          width: (MediaQuery.of(context).size.width / 3.5),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                  colors: [
+                                    Color.fromARGB(255, 16, 150, 74),
+                                    Color.fromARGB(255, 159, 197, 159),
+                                  ],
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter),
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'আজান',
+                                style: TextStyle(color: Colors.white, fontSize: 18),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Image.asset(
+                                'images/praying.png',
+                                width: 40,
+                                height: 40,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -280,35 +283,38 @@ class _HomePageState extends State<HomePage> {
                           MaterialPageRoute(builder: (context) => const OjuPage()),
                         );
                       },
-                      child: Container(
-                        height: (MediaQuery.of(context).size.height / 6.5),
-                        width: (MediaQuery.of(context).size.width / 3.5),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            gradient: const LinearGradient(
-                                colors: [
-                                  Color.fromARGB(255, 16, 150, 74),
-                                  Color.fromARGB(255, 159, 197, 159),
-                                ],
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter),
-                            borderRadius: BorderRadius.circular(15)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'ওজু',
-                              style: TextStyle(color: Colors.white, fontSize: 18),
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Image.asset(
-                              'images/praying.png',
-                              width: 40,
-                              height: 40,
-                            ),
-                          ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: (MediaQuery.of(context).size.height / 6.5),
+                          width: (MediaQuery.of(context).size.width / 3.5),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                  colors: [
+                                    Color.fromARGB(255, 16, 150, 74),
+                                    Color.fromARGB(255, 159, 197, 159),
+                                  ],
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter),
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'ওজু',
+                                style: TextStyle(color: Colors.white, fontSize: 18),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Image.asset(
+                                'images/praying.png',
+                                width: 40,
+                                height: 40,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -322,35 +328,38 @@ class _HomePageState extends State<HomePage> {
                             MaterialPageRoute(
                                 builder: (context) => const MosjidPage()));
                       },
-                      child: Container(
-                        height: (MediaQuery.of(context).size.height / 6.5),
-                        width: (MediaQuery.of(context).size.width / 3.5),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            gradient: const LinearGradient(
-                                colors: [
-                                  Color.fromARGB(255, 16, 150, 74),
-                                  Color.fromARGB(255, 159, 197, 159),
-                                ],
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter),
-                            borderRadius: BorderRadius.circular(15)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'মসজিদ',
-                              style: TextStyle(color: Colors.white, fontSize: 18),
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Image.asset(
-                              'images/praying.png',
-                              width: 40,
-                              height: 40,
-                            ),
-                          ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: (MediaQuery.of(context).size.height / 6.5),
+                          width: (MediaQuery.of(context).size.width / 3.5),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                  colors: [
+                                    Color.fromARGB(255, 16, 150, 74),
+                                    Color.fromARGB(255, 159, 197, 159),
+                                  ],
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter),
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'মসজিদ',
+                                style: TextStyle(color: Colors.white, fontSize: 18),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Image.asset(
+                                'images/praying.png',
+                                width: 40,
+                                height: 40,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -376,35 +385,38 @@ class _HomePageState extends State<HomePage> {
                               builder: (context) => const NamajPage()),
                         );
                       },
-                      child: Container(
-                        height: (MediaQuery.of(context).size.height / 6.5),
-                        width: (MediaQuery.of(context).size.width / 3.5),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            gradient: const LinearGradient(
-                                colors: [
-                                  Color.fromARGB(255, 16, 150, 74),
-                                  Color.fromARGB(255, 159, 197, 159),
-                                ],
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter),
-                            borderRadius: BorderRadius.circular(15)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'নামাজ',
-                              style: TextStyle(color: Colors.white, fontSize: 18),
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Image.asset(
-                              'images/praying.png',
-                              width: 40,
-                              height: 40,
-                            ),
-                          ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: (MediaQuery.of(context).size.height / 6.5),
+                          width: (MediaQuery.of(context).size.width / 3.5),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                  colors: [
+                                    Color.fromARGB(255, 16, 150, 74),
+                                    Color.fromARGB(255, 159, 197, 159),
+                                  ],
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter),
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'নামাজ',
+                                style: TextStyle(color: Colors.white, fontSize: 18),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Image.asset(
+                                'images/praying.png',
+                                width: 40,
+                                height: 40,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -418,35 +430,38 @@ class _HomePageState extends State<HomePage> {
                           MaterialPageRoute(builder: (context) => const SuraPage()),
                         );
                       },
-                      child: Container(
-                        height: (MediaQuery.of(context).size.height / 6.5),
-                        width: (MediaQuery.of(context).size.width / 3.5),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            gradient: const LinearGradient(
-                                colors: [
-                                  Color.fromARGB(255, 16, 150, 74),
-                                  Color.fromARGB(255, 159, 197, 159),
-                                ],
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter),
-                            borderRadius: BorderRadius.circular(15)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'সূরা',
-                              style: TextStyle(color: Colors.white, fontSize: 18),
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Image.asset(
-                              'images/praying.png',
-                              width: 40,
-                              height: 40,
-                            ),
-                          ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: (MediaQuery.of(context).size.height / 6.5),
+                          width: (MediaQuery.of(context).size.width / 3.5),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                  colors: [
+                                    Color.fromARGB(255, 16, 150, 74),
+                                    Color.fromARGB(255, 159, 197, 159),
+                                  ],
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter),
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'সূরা',
+                                style: TextStyle(color: Colors.white, fontSize: 18),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Image.asset(
+                                'images/praying.png',
+                                width: 40,
+                                height: 40,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -460,35 +475,38 @@ class _HomePageState extends State<HomePage> {
                             MaterialPageRoute(
                                 builder: (context) => const GosolePage()));
                       },
-                      child: Container(
-                        height: (MediaQuery.of(context).size.height / 6.5),
-                        width: (MediaQuery.of(context).size.width / 3.5),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            gradient: const LinearGradient(
-                                colors: [
-                                  Color.fromARGB(255, 16, 150, 74),
-                                  Color.fromARGB(255, 159, 197, 159),
-                                ],
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter),
-                            borderRadius: BorderRadius.circular(15)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'গোসল',
-                              style: TextStyle(color: Colors.white, fontSize: 18),
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Image.asset(
-                              'images/praying.png',
-                              width: 40,
-                              height: 40,
-                            ),
-                          ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: (MediaQuery.of(context).size.height / 6.5),
+                          width: (MediaQuery.of(context).size.width / 3.5),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                  colors: [
+                                    Color.fromARGB(255, 16, 150, 74),
+                                    Color.fromARGB(255, 159, 197, 159),
+                                  ],
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter),
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'গোসল',
+                                style: TextStyle(color: Colors.white, fontSize: 18),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Image.asset(
+                                'images/praying.png',
+                                width: 40,
+                                height: 40,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
