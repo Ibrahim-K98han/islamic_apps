@@ -5,6 +5,7 @@ import 'package:namaj_apps/pages/masjid_page.dart';
 import 'package:namaj_apps/pages/namaj_page.dart';
 import 'package:namaj_apps/pages/romjan_calender_page.dart';
 import 'package:namaj_apps/pages/sura_page.dart';
+import 'package:namaj_apps/pages/tajbiha_page.dart';
 import 'package:namaj_apps/pages/tayamum_page.dart';
 
 import 'oju_page.dart';
@@ -567,147 +568,103 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const TayamumPage()),
-                      );
-                    },
-                    child: Container(
-                      height: (MediaQuery.of(context).size.height / 7),
-                      width: (MediaQuery.of(context).size.height / 7),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          // gradient: const LinearGradient(
-                          //     colors: [
-                          //       Color.fromARGB(255, 16, 150, 74),
-                          //       Color.fromARGB(255, 159, 197, 159),
-                          //     ],
-                          //     begin: Alignment.bottomCenter,
-                          //     end: Alignment.topCenter),
-                          //color: Colors.green,
-                          border: Border.all(width: 1, color: Colors.green),
-                          borderRadius: BorderRadius.circular(15)),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const FittedBox(
-                            child: Text(
-                              'তায়াম্মুম',
-                              style: TextStyle(
-                                color: Colors.green,
-                                fontSize: 18,
+                  Expanded(
+                    flex: 1,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const TayamumPage()),
+                        );
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: (MediaQuery.of(context).size.height / 6.5),
+                          width: (MediaQuery.of(context).size.width / 3.5),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            // gradient: const LinearGradient(
+                            //     colors: [
+                            //       Color.fromARGB(255, 16, 150, 74),
+                            //       Color.fromARGB(255, 159, 197, 159),
+                            //     ],
+                            //     begin: Alignment.bottomCenter,
+                            //     end: Alignment.topCenter),
+                              border: Border.all(width: 1, color: Colors.green),
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'তায়াম্মুম',
+                                style: TextStyle(
+                                    color: Colors.green, fontSize: 18),
                               ),
-                            ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Image.asset(
+                                'images/praying.png',
+                                width: 40,
+                                height: 40,
+                              ),
+                            ],
                           ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Image.asset(
-                            'images/praying.png',
-                            width: 40,
-                            height: 40,
-                          ),
-                        ],
+                        ),
                       ),
                     ),
                   ),
-                  // InkWell(
-                  //   onTap: () {
-                  //     // Navigator.push(
-                  //     //   context,
-                  //     //   MaterialPageRoute(builder: (context) => OjuPage()),
-                  //     // );
-                  //   },
-                  //   child: Expanded(
-                  //     child: Container(
-                  //       height: (MediaQuery.of(context).size.height / 6.5),
-                  //       width: (MediaQuery.of(context).size.width / 3.5),
-                  //       alignment: Alignment.center,
-                  //       decoration: BoxDecoration(
-                  //           gradient: const LinearGradient(
-                  //               colors: [
-                  //                 Color.fromARGB(255, 16, 150, 74),
-                  //                 Color.fromARGB(255, 159, 197, 159),
-                  //               ],
-                  //               begin: Alignment.bottomCenter,
-                  //               end: Alignment.topCenter),
-                  //           borderRadius: BorderRadius.circular(15)),
-                  //       child: Column(
-                  //         mainAxisAlignment: MainAxisAlignment.center,
-                  //         children: [
-                  //           const FittedBox(
-                  //             child:  Padding(
-                  //               padding: const EdgeInsets.all(8.0),
-                  //               child: Text(
-                  //                 'পুরুষের নামাজ',
-                  //                 style: TextStyle(
-                  //                     color: Colors.white, fontSize: 18),
-                  //               ),
-                  //             ),
-                  //           ),
-                  //           const SizedBox(
-                  //             height: 20,
-                  //           ),
-                  //           Image.asset(
-                  //             'images/praying.png',
-                  //             width: 40,
-                  //             height: 40,
-                  //           ),
-                  //         ],
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
-                  // InkWell(
-                  //   onTap: () {
-                  //     // Navigator.push(
-                  //     //     context,
-                  //     //     MaterialPageRoute(
-                  //     //         builder: (context) => MosjidPage()));
-                  //   },
-                  //   child: Expanded(
-                  //     child: Container(
-                  //       height: (MediaQuery.of(context).size.height / 6.5),
-                  //       width: (MediaQuery.of(context).size.width / 3.5),
-                  //       alignment: Alignment.center,
-                  //       decoration: BoxDecoration(
-                  //           gradient: const LinearGradient(
-                  //               colors: [
-                  //                 Color.fromARGB(255, 16, 150, 74),
-                  //                 Color.fromARGB(255, 159, 197, 159),
-                  //               ],
-                  //               begin: Alignment.bottomCenter,
-                  //               end: Alignment.topCenter),
-                  //           borderRadius: BorderRadius.circular(15)),
-                  //       child: Column(
-                  //         mainAxisAlignment: MainAxisAlignment.center,
-                  //         children: [
-                  //           const FittedBox(
-                  //             child:  Padding(
-                  //               padding:  EdgeInsets.all(8.0),
-                  //               child: Text(
-                  //                 'মহিলাদের নামাজ',
-                  //                 style: TextStyle(
-                  //                     color: Colors.white, fontSize: 18),
-                  //               ),
-                  //             ),
-                  //           ),
-                  //           const SizedBox(
-                  //             height: 20,
-                  //           ),
-                  //           Image.asset(
-                  //             'images/praying.png',
-                  //             width: 40,
-                  //             height: 40,
-                  //           ),
-                  //         ],
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
+                  Expanded(
+                    flex: 1,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const TajbhiaPage()),
+                        );
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: (MediaQuery.of(context).size.height / 6.5),
+                          width: (MediaQuery.of(context).size.width / 3.5),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            // gradient: const LinearGradient(
+                            //     colors: [
+                            //       Color.fromARGB(255, 16, 150, 74),
+                            //       Color.fromARGB(255, 159, 197, 159),
+                            //     ],
+                            //     begin: Alignment.bottomCenter,
+                            //     end: Alignment.topCenter),
+                              border: Border.all(width: 1, color: Colors.green),
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'তাসবিহ',
+                                style: TextStyle(
+                                    color: Colors.green, fontSize: 18),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Image.asset(
+                                'images/praying.png',
+                                width: 40,
+                                height: 40,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+
                 ],
               ),
             ),
