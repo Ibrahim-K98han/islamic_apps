@@ -68,23 +68,35 @@ class _TajbhiaPageState extends State<TajbhiaPage> {
                     ),
                   ],
                 )),
-            const SizedBox(height: 50,),
+            const SizedBox(
+              height: 50,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(100, 60),
-                    backgroundColor: Colors.green,
-                  ),
-                    onPressed: _incrementCounter, child: const Text('পড়ুন',style: TextStyle(fontSize: 20),)),
-                const SizedBox(width: 20,),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(100, 60),
                       backgroundColor: Colors.green,
                     ),
-                    onPressed: _clear, child: const Text('আবার শুরু করুন',style: TextStyle(fontSize: 15),))
+                    onPressed: _incrementCounter,
+                    child: const Text(
+                      'পড়ুন',
+                      style: TextStyle(fontSize: 20),
+                    )),
+                const SizedBox(
+                  width: 20,
+                ),
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(100, 60),
+                      backgroundColor: Colors.green,
+                    ),
+                    onPressed: _clear,
+                    child: const Text(
+                      'আবার শুরু করুন',
+                      style: TextStyle(fontSize: 15),
+                    ))
               ],
             )
           ],
