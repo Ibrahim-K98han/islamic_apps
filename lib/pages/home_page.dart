@@ -3,6 +3,7 @@ import 'package:namaj_apps/pages/azan_page.dart';
 import 'package:namaj_apps/pages/gosole_page.dart';
 import 'package:namaj_apps/pages/masjid_page.dart';
 import 'package:namaj_apps/pages/namaj_page.dart';
+import 'package:namaj_apps/pages/prayer_time_page.dart';
 import 'package:namaj_apps/pages/romjan_calender_page.dart';
 import 'package:namaj_apps/pages/sura_page.dart';
 import 'package:namaj_apps/pages/tajbiha_page.dart';
@@ -664,7 +665,59 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-
+                  Expanded(
+                    flex: 1,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const PrayTimes()),
+                        );
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: (MediaQuery.of(context).size.height / 6.5),
+                          width: (MediaQuery.of(context).size.width / 3.5),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            // gradient: const LinearGradient(
+                            //     colors: [
+                            //       Color.fromARGB(255, 16, 150, 74),
+                            //       Color.fromARGB(255, 159, 197, 159),
+                            //     ],
+                            //     begin: Alignment.bottomCenter,
+                            //     end: Alignment.topCenter),
+                              border: Border.all(width: 1, color: Colors.green),
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                               FittedBox(
+                                 child: Padding(
+                                   padding: const EdgeInsets.symmetric(horizontal: 5),
+                                   child: Text(
+                                    'নামাজের সময়',
+                                    style: TextStyle(
+                                        color: Colors.green, fontSize: 18),
+                              ),
+                                 ),
+                               ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Image.asset(
+                                'images/praying.png',
+                                width: 40,
+                                height: 40,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
