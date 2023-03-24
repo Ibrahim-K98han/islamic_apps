@@ -672,7 +672,7 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const PrayTimes()),
+                              builder: (context) => PrayTimes()),
                         );
                       },
                       child: Padding(

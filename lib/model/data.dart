@@ -1,23 +1,25 @@
+// To parse this JSON data, do
+//
+//     final data = dataFromJson(jsonString);
+
 import 'dart:convert';
 
-class PrayerTimeModel {
-  final int? code;
-  final String? status;
-  final DataClass? data;
+class Data {
+  final int code;
+  final String status;
+  final DataClass data;
 
-  PrayerTimeModel({
-    this.code,
-    this.status,
-    this.data,
+  Data({
+    required this.code,
+    required this.status,
+    required this.data,
   });
 
-  factory PrayerTimeModel.fromRawJson(String str) =>
-      PrayerTimeModel.fromJson(json.decode(str));
+  factory Data.fromRawJson(String str) => Data.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory PrayerTimeModel.fromJson(Map<String, dynamic> json) =>
-      PrayerTimeModel(
+  factory Data.fromJson(Map<String, dynamic> json) => Data(
         code: json["code"],
         status: json["status"],
         data: DataClass.fromJson(json["data"]),
@@ -26,19 +28,19 @@ class PrayerTimeModel {
   Map<String, dynamic> toJson() => {
         "code": code,
         "status": status,
-        "data": data?.toJson(),
+        "data": data.toJson(),
       };
 }
 
 class DataClass {
-  final Timings? timings;
-  final Date? date;
-  final Meta? meta;
+  final Timings timings;
+  final Date date;
+  final Meta meta;
 
   DataClass({
-    this.timings,
-    this.date,
-    this.meta,
+    required this.timings,
+    required this.date,
+    required this.meta,
   });
 
   factory DataClass.fromRawJson(String str) =>
@@ -53,23 +55,23 @@ class DataClass {
       );
 
   Map<String, dynamic> toJson() => {
-        "timings": timings?.toJson(),
-        "date": date?.toJson(),
-        "meta": meta?.toJson(),
+        "timings": timings.toJson(),
+        "date": date.toJson(),
+        "meta": meta.toJson(),
       };
 }
 
 class Date {
-  final String? readable;
-  final String? timestamp;
-  final Hijri? hijri;
-  final Gregorian? gregorian;
+  final String readable;
+  final String timestamp;
+  final Hijri hijri;
+  final Gregorian gregorian;
 
   Date({
-    this.readable,
-    this.timestamp,
-    this.hijri,
-    this.gregorian,
+    required this.readable,
+    required this.timestamp,
+    required this.hijri,
+    required this.gregorian,
   });
 
   factory Date.fromRawJson(String str) => Date.fromJson(json.decode(str));
@@ -86,28 +88,28 @@ class Date {
   Map<String, dynamic> toJson() => {
         "readable": readable,
         "timestamp": timestamp,
-        "hijri": hijri?.toJson(),
-        "gregorian": gregorian?.toJson(),
+        "hijri": hijri.toJson(),
+        "gregorian": gregorian.toJson(),
       };
 }
 
 class Gregorian {
-  final String? date;
-  final String? format;
-  final String? day;
-  final GregorianWeekday? weekday;
-  final GregorianMonth? month;
-  final String? year;
-  final Designation? designation;
+  final String date;
+  final String format;
+  final String day;
+  final GregorianWeekday weekday;
+  final GregorianMonth month;
+  final String year;
+  final Designation designation;
 
   Gregorian({
-    this.date,
-    this.format,
-    this.day,
-    this.weekday,
-    this.month,
-    this.year,
-    this.designation,
+    required this.date,
+    required this.format,
+    required this.day,
+    required this.weekday,
+    required this.month,
+    required this.year,
+    required this.designation,
   });
 
   factory Gregorian.fromRawJson(String str) =>
@@ -129,20 +131,20 @@ class Gregorian {
         "date": date,
         "format": format,
         "day": day,
-        "weekday": weekday?.toJson(),
-        "month": month?.toJson(),
+        "weekday": weekday.toJson(),
+        "month": month.toJson(),
         "year": year,
-        "designation": designation?.toJson(),
+        "designation": designation.toJson(),
       };
 }
 
 class Designation {
-  final String? abbreviated;
-  final String? expanded;
+  final String abbreviated;
+  final String expanded;
 
   Designation({
-    this.abbreviated,
-    this.expanded,
+    required this.abbreviated,
+    required this.expanded,
   });
 
   factory Designation.fromRawJson(String str) =>
@@ -162,12 +164,12 @@ class Designation {
 }
 
 class GregorianMonth {
-  final int? number;
-  final String? en;
+  final int number;
+  final String en;
 
   GregorianMonth({
-    this.number,
-    this.en,
+    required this.number,
+    required this.en,
   });
 
   factory GregorianMonth.fromRawJson(String str) =>
@@ -187,10 +189,10 @@ class GregorianMonth {
 }
 
 class GregorianWeekday {
-  final String? en;
+  final String en;
 
   GregorianWeekday({
-    this.en,
+    required this.en,
   });
 
   factory GregorianWeekday.fromRawJson(String str) =>
@@ -209,24 +211,24 @@ class GregorianWeekday {
 }
 
 class Hijri {
-  final String? date;
-  final String? format;
-  final String? day;
-  final HijriWeekday? weekday;
-  final HijriMonth? month;
-  final String? year;
-  final Designation? designation;
-  final List<dynamic>? holidays;
+  final String date;
+  final String format;
+  final String day;
+  final HijriWeekday weekday;
+  final HijriMonth month;
+  final String year;
+  final Designation designation;
+  final List<dynamic> holidays;
 
   Hijri({
-    this.date,
-    this.format,
-    this.day,
-    this.weekday,
-    this.month,
-    this.year,
-    this.designation,
-    this.holidays,
+    required this.date,
+    required this.format,
+    required this.day,
+    required this.weekday,
+    required this.month,
+    required this.year,
+    required this.designation,
+    required this.holidays,
   });
 
   factory Hijri.fromRawJson(String str) => Hijri.fromJson(json.decode(str));
@@ -248,23 +250,23 @@ class Hijri {
         "date": date,
         "format": format,
         "day": day,
-        "weekday": weekday?.toJson(),
-        "month": month?.toJson(),
+        "weekday": weekday.toJson(),
+        "month": month.toJson(),
         "year": year,
-        "designation": designation?.toJson(),
-        "holidays": List<dynamic>.from(holidays!.map((x) => x)),
+        "designation": designation.toJson(),
+        "holidays": List<dynamic>.from(holidays.map((x) => x)),
       };
 }
 
 class HijriMonth {
-  final int? number;
-  final String? en;
-  final String? ar;
+  final int number;
+  final String en;
+  final String ar;
 
   HijriMonth({
-    this.number,
-    this.en,
-    this.ar,
+    required this.number,
+    required this.en,
+    required this.ar,
   });
 
   factory HijriMonth.fromRawJson(String str) =>
@@ -286,12 +288,12 @@ class HijriMonth {
 }
 
 class HijriWeekday {
-  final String? en;
-  final String? ar;
+  final String en;
+  final String ar;
 
   HijriWeekday({
-    this.en,
-    this.ar,
+    required this.en,
+    required this.ar,
   });
 
   factory HijriWeekday.fromRawJson(String str) =>
@@ -311,24 +313,24 @@ class HijriWeekday {
 }
 
 class Meta {
-  final double? latitude;
-  final double? longitude;
-  final String? timezone;
-  final Method? method;
-  final String? latitudeAdjustmentMethod;
-  final String? midnightMode;
-  final String? school;
-  final Offset? offset;
+  final double latitude;
+  final double longitude;
+  final String timezone;
+  final Method method;
+  final String latitudeAdjustmentMethod;
+  final String midnightMode;
+  final String school;
+  final Offset offset;
 
   Meta({
-    this.latitude,
-    this.longitude,
-    this.timezone,
-    this.method,
-    this.latitudeAdjustmentMethod,
-    this.midnightMode,
-    this.school,
-    this.offset,
+    required this.latitude,
+    required this.longitude,
+    required this.timezone,
+    required this.method,
+    required this.latitudeAdjustmentMethod,
+    required this.midnightMode,
+    required this.school,
+    required this.offset,
   });
 
   factory Meta.fromRawJson(String str) => Meta.fromJson(json.decode(str));
@@ -350,23 +352,23 @@ class Meta {
         "latitude": latitude,
         "longitude": longitude,
         "timezone": timezone,
-        "method": method?.toJson(),
+        "method": method.toJson(),
         "latitudeAdjustmentMethod": latitudeAdjustmentMethod,
         "midnightMode": midnightMode,
         "school": school,
-        "offset": offset?.toJson(),
+        "offset": offset.toJson(),
       };
 }
 
 class Method {
-  final int? id;
-  final String? name;
-  final Params? params;
+  final int id;
+  final String name;
+  final Params params;
 
   Method({
-    this.id,
-    this.name,
-    this.params,
+    required this.id,
+    required this.name,
+    required this.params,
   });
 
   factory Method.fromRawJson(String str) => Method.fromJson(json.decode(str));
@@ -382,16 +384,16 @@ class Method {
   Map<String, dynamic> toJson() => {
         "id": id,
         "name": name,
-        "params": params?.toJson(),
+        "params": params.toJson(),
       };
 }
 
 class Params {
-  final double? fajr;
+  final double fajr;
   final dynamic isha;
 
   Params({
-    this.fajr,
+    required this.fajr,
     this.isha,
   });
 
