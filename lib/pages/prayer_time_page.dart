@@ -19,10 +19,10 @@ class _PrayTimesState extends State<PrayTimes> {
 
   static String city = 'Dhaka';
   static String country = 'Bangladesh';
-  static int method = 8;
+  static int method = 1;
 
   final String url =
-      'http://api.aladhan.com/v1/timingsByCity?city=$city&country=$country&method=$method';
+      'http://api.aladhan.com/v1/calendar/2023/4?latitude=23.810331&longitude=90.412521&method=$method';
 
   Future getPTData() async {
     http.Response res = await http.get(Uri.parse(url), headers: {
@@ -44,7 +44,7 @@ class _PrayTimesState extends State<PrayTimes> {
         backgroundColor: Colors.blue,
       ),
       body: FutureBuilder(
-        future: jsonConnection.getPTLocation(),
+        //future: jsonConnection.getPTLocation(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
             return Center(
               child: Padding(

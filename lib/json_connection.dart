@@ -22,7 +22,7 @@ class JsonConnection {
     String date = DateTime.now().toIso8601String();
     int method = 4;
 
-    final url = "http://api.aladhan.com/v1/timings/$date?latitude=$pLat&longitude=$pLong&method=$method";
+    final url = "http://api.aladhan.com/v1/calendar/2023/4?latitude=23.810331&longitude=90.412521&method=$method";
 
     http.Response res = await http.get(Uri.parse(url), headers: {
       "Accept":
