@@ -57,13 +57,21 @@ class _PrayTimesState extends State<PrayTimes> {
         title: Text('Pray Times'),
         backgroundColor: Colors.blue,
       ),
-      body: ListView.builder(
-        itemCount: data.length,
-        itemBuilder: (context, index){
-          return ListTile(
-            title: Text(),
-          );
-        },
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+                width: double.infinity,
+                height: 50,
+                color: Colors.red,
+                child: Text("ফজর : ${data["timings"]["Fajr"]}")),
+            Text("যোহর : ${data["timings"]["Dhuhr"]}"),
+            Text("আছর : ${data["timings"]["Asr"]}"),
+            Text("মাগরীব : ${data["timings"]["Maghrib"]}"),
+            Text("এশা : ${data["timings"]["Isha"]}"),
+          ],
+        ),
       )
     );
   }
