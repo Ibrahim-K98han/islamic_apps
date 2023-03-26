@@ -2,6 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:intl/intl.dart';
+
+import '../prayer_time_model.dart';
 
 class PrayTimes extends StatefulWidget {
   PrayTimes({super.key});
@@ -11,10 +14,10 @@ class PrayTimes extends StatefulWidget {
 }
 
 class _PrayTimesState extends State<PrayTimes> {
-
   // JsonConnection jsonConnection = new JsonConnection();
   // late Data list;
-
+  Timings? timings;
+  
   static String city = 'Dhaka';
   static String country = 'Bangladesh';
   static int method = 8;
@@ -22,21 +25,23 @@ class _PrayTimesState extends State<PrayTimes> {
 
   final String url =
       'http://api.aladhan.com/v1/timingsByCity?city=$city&country=$country&method=$method';
-  Future getData()async{
+  Future getData() async {
     var response = await http.get(Uri.parse(url));
     setState(() {
       var decode = json.decode(response.body);
-      data = decode["data"];
-      print(data);
+
+      timings = Timings.fromJson(decode["data"]["timings"]);
+
+      // data = decode["data"];
+      // print(data);
     });
   }
 
   @override
   void initState() {
     super.initState();
-    this.getData();
+    // getData();
   }
-
 
   // Future getPTData() async {
   //   http.Response res = await http.get(Uri.parse(url), headers: {
@@ -53,26 +58,56 @@ class _PrayTimesState extends State<PrayTimes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Pray Times'),
-        backgroundColor: Colors.blue,
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-                width: double.infinity,
-                height: 50,
-                color: Colors.red,
-                child: Text("ফজর : ${data["timings"]["Fajr"]}")),
-            Text("যোহর : ${data["timings"]["Dhuhr"]}"),
-            Text("আছর : ${data["timings"]["Asr"]}"),
-            Text("মাগরীব : ${data["timings"]["Maghrib"]}"),
-            Text("এশা : ${data["timings"]["Isha"]}"),
-          ],
+        appBar: AppBar(
+          title: Text('Pray Times'),
+          backgroundColor: Colors.blue,
         ),
-      )
-    );
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    getData();
+                  },
+                  child: Text('Clicke')),
+              timings != null
+                  ? Column(
+                    children: [
+                      Container(
+                          width: double.infinity,
+                          height: 50,
+                          color: Colors.red,
+                          child: Text(timings!.fajr!)),
+                          Container(
+                          width: double.infinity,
+                          height: 50,
+                          color: Colors.red,
+                          child: Text(timings!.dhuhr!)),
+                          Container(
+                          width: double.infinity,
+                          height: 50,
+                          color: Colors.red,
+                          child: Text(timings!.asr!)),
+                          Container(
+                          width: double.infinity,
+                          height: 50,
+                          color: Colors.red,
+                          child: Text(timings!.maghrib!)),
+                          Container(
+                          width: double.infinity,
+                          height: 50,
+                          color: Colors.red,
+                          child: Text(timings!.isha!)),
+                    ],
+                  )
+                  : SizedBox.shrink(),
+              // Text("যোহর : ${data["timings"]["Dhuhr"]}"),
+              // Text("আছর : ${data["timings"]["Asr"]}"),
+              // Text("মাগরীব : ${data["timings"]["Maghrib"]}"),
+              // Text("এশা : ${data["timings"]["Isha"]}"),
+            ],
+          ),
+        ));
   }
 }
