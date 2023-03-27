@@ -17,7 +17,7 @@ class _PrayTimesState extends State<PrayTimes> {
   // JsonConnection jsonConnection = new JsonConnection();
   // late Data list;
   Timings? timings;
-  
+
   static String city = 'Dhaka';
   static String country = 'Bangladesh';
   static int method = 8;
@@ -27,13 +27,14 @@ class _PrayTimesState extends State<PrayTimes> {
       'http://api.aladhan.com/v1/timingsByCity?city=$city&country=$country&method=$method';
   Future getData() async {
     var response = await http.get(Uri.parse(url));
+    //print('..................$response');
     setState(() {
       var decode = json.decode(response.body);
 
       timings = Timings.fromJson(decode["data"]["timings"]);
 
       // data = decode["data"];
-      // print(data);
+      //print('..................$timings');
     });
   }
 
@@ -73,34 +74,41 @@ class _PrayTimesState extends State<PrayTimes> {
                   child: Text('Clicke')),
               timings != null
                   ? Column(
-                    children: [
-                      Container(
-                          width: double.infinity,
-                          height: 50,
-                          color: Colors.red,
-                          child: Text(timings!.fajr!)),
-                          Container(
-                          width: double.infinity,
-                          height: 50,
-                          color: Colors.red,
-                          child: Text(timings!.dhuhr!)),
-                          Container(
-                          width: double.infinity,
-                          height: 50,
-                          color: Colors.red,
-                          child: Text(timings!.asr!)),
-                          Container(
-                          width: double.infinity,
-                          height: 50,
-                          color: Colors.red,
-                          child: Text(timings!.maghrib!)),
-                          Container(
-                          width: double.infinity,
-                          height: 50,
-                          color: Colors.red,
-                          child: Text(timings!.isha!)),
-                    ],
-                  )
+                      children: [
+                        Container(
+                            width: double.infinity,
+                            height: 50,
+                            color: Colors.red,
+                            child: Text(
+                                '${DateFormat("h:mm a").format(DateFormat("hh:mm").parse(timings!.fajr!))}')),
+                        Container(
+                            width: double.infinity,
+                            height: 50,
+                            color: Colors.red,
+                            child: Text(
+                                '${DateFormat("h:mm a").format(DateFormat("hh:mm").parse(timings!.dhuhr!))}')),
+                        Container(
+                            width: double.infinity,
+                            height: 50,
+                            color: Colors.red,
+                            child: Text(
+                                '${DateFormat("h:mm a").format(DateFormat("hh:mm").parse(timings!.asr!))}')),
+                        Container(
+                            width: double.infinity,
+                            height: 50,
+                            color: Colors.red,
+                            child: Text(
+                                '${DateFormat("h:mm a").format(DateFormat("hh:mm").parse(timings!.maghrib!))}')),
+                        Container(
+                            width: double.infinity,
+                            height: 50,
+                            color: Colors.red,
+                            //DateFormat.j().format(DateTime.now()),
+                            // timings.isha
+                            child: Text(
+                                '${DateFormat("h:mm a").format(DateFormat("hh:mm").parse(timings!.isha!))}'))
+                      ],
+                    )
                   : SizedBox.shrink(),
               // Text("যোহর : ${data["timings"]["Dhuhr"]}"),
               // Text("আছর : ${data["timings"]["Asr"]}"),
